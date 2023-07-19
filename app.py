@@ -28,4 +28,4 @@ def predict_crop():
     return render_template('index.html', result=rs)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=3000)
