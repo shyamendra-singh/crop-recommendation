@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request
+ugfrom flask import Flask, render_template,request
 import pickle
 import numpy as np
 import pandas as pd
@@ -28,4 +28,4 @@ def predict_crop():
     return render_template('index.html', result=rs)
 
 if __name__ == '__main__':
-    app.run(port=3000)
+    app.run(port=3000,debug=True)
