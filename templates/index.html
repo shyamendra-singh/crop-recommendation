@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <title>Crop Recommender</title>
+
+</head>
+<body>
+    <section class="container">
+        <img class = "center" src="{{ url_for('static', filename='css/Crop.svg') }}" width="500" height="100" alt="Crop Recommendator">
+        <header> Crop Recommender</header>
+        
+        <div class="result">
+            {% if result %}
+            <p>You should grow <b>{{result}}</b></p>
+            {% endif %}
+        </div>
+
+        <form method="post" action= "/predict" class="form">
+            <div class="input-box">
+                <label>Nitrogen (N)</label><br>
+                <input type="text" name = "Nitrogen" placeholder="Enter Nitrogen content" required>
+            </div>
+            
+            <div class="input-box">
+                <label>Phosphorus (P)</label><br>
+                <input type="text" name = "Phosphorus" placeholder="Enter Phosphorus content" required>
+            </div>
+
+            <div class="input-box">
+                <label>Potassium (K)</label>
+                <input type="text" name = "Potassium" placeholder="Enter Potassium content" required>
+            </div>
+
+            <div class="input-box">    
+                <label>Temperature</label>
+                <input type="text" name = "Temperature" placeholder="Enter Temperature value" required>
+            </div>
+
+            <div class="input-box">    
+                <label>Humidity</label>
+                <input type="text" name = "Humidity" placeholder="Enter Humidity value" required>
+            </div>
+
+            <div class="input-box">   
+                <label>pH</label>
+                <input type="text" name = "pH" placeholder="Enter pH value" required>
+            </div>
+
+            <div class="input-box">   
+                <label>Rainfall</label>
+                <input type="text" name = "Rainfall" placeholder="Enter Rainfall" required>
+            </div>
+                
+            <input type="submit" value = "Predict" class="button">
+
+            <div class="footer">
+                <p>Developed by <a href="https://linkedin.com/in/shyamendrasingh" target="_blank">@Shyamendra Singh</a></p>
+
+            </div>
+        </form>
+    </section>
+</body>
+</html>
