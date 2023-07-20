@@ -37,7 +37,7 @@ turtle==0.0.1
 urllib3==1.26.9
 wcwidth==0.2.5
 webencodings==0.5.1
-Werkzeug==2.3.6
+Werkzeug
 widgetsnbextension==3.6.1
 wsproto==1.1.0
 gunicorn
