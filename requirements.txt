@@ -1,5 +1,4 @@
 pickle-mixin
-pcikle
 Flask
 matplotlib==3.5.2
 matplotlib-inline==0.1.3
